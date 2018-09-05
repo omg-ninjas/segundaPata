@@ -4,7 +4,7 @@
   "description": "A second hand for pet supplies",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
+    "start": "webpack --mode development --watch",
     "build": "webpack --mode development",
     "build:prod": "webpack --mode production",
     "server": "nodemon server/index.js"
