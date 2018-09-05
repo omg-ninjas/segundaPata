@@ -2,7 +2,7 @@
   "name": "segundapata",
   "version": "1.0.0",
   "description": "A second hand for pet supplies",
-  "main": "index.js",
+  "main": "App.jsx",
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode development",

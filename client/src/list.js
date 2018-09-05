@@ -3,11 +3,11 @@ import React, {Component}from "react";
 
 class List extends React.Component{
   constructor(props){
-    super()
+    super(props)
     this.state ={
       list:[]
     }
-    
+
   }
 
 }
