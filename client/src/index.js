@@ -1,6 +1,6 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
-
+import menuItem from "./menuItem.js";
 
 const Index = () => (
   <center>
@@ -12,12 +12,5 @@ const Index = () => (
     <h2>Vende y Compra Accesorios, para Mascotas.</h2>
     </center>
   );
-
-  const menuItem = (
-  <div>
-
-
-  </div>
-)
 
 ReactDOM.render(<Index />, document.getElementById("index"));

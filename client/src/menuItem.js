@@ -1,7 +1,7 @@
 import React, {Component}from "react";
-import menuItem from "menuItem.js";
+import List from "./list.js";
 
-class Index extends React.Component{
+class menuItem extends React.Component{
   constructor(props){
     super()
     this.state ={
@@ -9,7 +9,7 @@ class Index extends React.Component{
     }
   }
   componentDidMount(){
-    this.date():
+    this.date();
   }
   date(){
     this.setState({
@@ -20,8 +20,8 @@ class Index extends React.Component{
   render(){
     console.log(this.state.list)
     return(
-      <div> dog
-      <Child hijo = {this.state.list}
+      <div>
+      <List list={this.state.list}/>
       </div>
     )
   }
