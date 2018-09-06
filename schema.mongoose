@@ -1,0 +1,15 @@
+var schema = new Schema(
+{
+  id: "ObjectId"
+  name: "",
+  description:"",
+  category:"",
+  subcategory:"",
+  comments:[
+          {
+            comments:"",
+            replies:""
+          }
+        ],
+  price:"00.00"
+})
