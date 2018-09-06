@@ -1,31 +1,29 @@
 import React, {Component}from "react";
 import List from "./list.js";
 
-class menuItem extends React.Component{
+class MenuItem extends React.Component{
   constructor(props){
     super()
     this.state ={
-      list:[]
+      list:[1,2,3,4]
     }
   }
-  componentDidMount(){
-    this.date();
-  }
-  date(){
-    this.setState({
-      list: transactions
-    })
 
-  }
+    date(){
+      this.setState({
+
+      })
+    }
+
   render(){
     console.log(this.state.list)
     return(
       <div>
-      <List list={this.state.list}/>
+      <List/>
       </div>
     )
   }
 }
 
 
-export default menuItem;
+export default MenuItem;
