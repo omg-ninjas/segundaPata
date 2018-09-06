@@ -5,11 +5,19 @@ class List extends React.Component{
   constructor(props){
     super(props)
     this.state ={
-      list:[]
+
     }
 
-  }
 
+  }
+render(){
+  return (
+    <div>
+    Hola soy List
+    <button type="button">Click Me!</button>
+    </div>
+  )
+}
 }
 
 
