@@ -1,8 +1,8 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
 import MenuItem from "./components/search/menuItem.js";
-import {BrowserRouter, Route} from "react-router-dom";
-import ItemPage from "./components/item-page.jsx";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import ItemPage from "./components/item-page/ItemPage.jsx";
 
 class App extends Component {
 render(){
