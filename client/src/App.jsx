@@ -1,6 +1,8 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
 import MenuItem from "./components/search/menuItem.js";
+import {BrowserRouter, Route} from "react-router-dom";
+import ItemPage from "./components/item-page.jsx";
 
 class App extends Component {
 render(){
@@ -14,6 +16,7 @@ render(){
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <MenuItem/>
+      <ItemPage />
       </center>
       </div>
     )
