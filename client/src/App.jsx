@@ -1,38 +1,31 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
-import menuItem from "./menuItem.js";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-class App extends React.Component{
-  constructor(props){
-    super(props)
-    this.state ={
-      list:[]
-    }
+import MenuItem from "./components/search/menuItem.js";
+import ItemPage from "./components/item-page/ItemPage.jsx";
+import Error from "./components/item-page/error.js";
+import Navigation from "./components/item-page/navigation.js";
+import Home from "./home.jsx";
 
-  }
-
+class App extends Component {
   render() {
-    return(
-      <center>
-      <div>
-  <h1>
-<a href="https://imgur.com/rTcOFGo"><img src="https://i.imgur.com/rTcOFGo.jpg" title="source: imgur.com" /></a>
-    <div>Segunda Pata</div>
-      </h1>
+    return (
+      <BrowserRouter>
+        <div>
+        
+          <Navigation />
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/item" component={ItemPage} />
+            <Route component={Error} />
+          </Switch>
 
-    <h2>Vende y Compra Accesorios, para Mascotas.</h2>
-    <menuItem />
-    </div>
-    </center>
-  );
-}
-}
-
-
-
-
-
-
+        </div>
+      </BrowserRouter>
+    );
+  }
+};
 
 
 ReactDOM.render(<App />, document.getElementById("App"));
