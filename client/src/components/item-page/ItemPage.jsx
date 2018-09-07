@@ -1,11 +1,11 @@
 import React from "react";
 
-const ItemPage = () => {
+const Error = () => {
   return (
     <div>
-    Item Page
+      <p>Oops! The dog ate this page</p>
     </div>
   );
-}
+};
 
-export default ItemPage;
+export default Error;

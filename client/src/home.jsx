@@ -16,7 +16,6 @@ render(){
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <MenuItem/>
-      <ItemPage />
       </center>
       </div>
     )
