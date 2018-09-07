@@ -1,4 +1,5 @@
 import React, {Component}from "react";
+import Search from "./../../../../server/routes.js";
 
 
 class List extends React.Component {
@@ -13,6 +14,7 @@ class List extends React.Component {
         }
         handleSubmit(event) {
             alert('A name was submitted: ' + this.state.value);
+            // call search function & render
             event.preventDefault();
         }
         render() {
