@@ -3,7 +3,7 @@ import React from "react";
 const ItemPage = () => {
   return (
     <div>
-    Item Page
+    Item Page bitches
     </div>
   );
 }

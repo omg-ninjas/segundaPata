@@ -3,7 +3,7 @@ import React from 'react';
 const Error = () => {
   return (
     <div>
-      <p>Oops! The dog ate this page</p>
+      <p> Oops! The dog ate this page </p>
     </div>
   );
 };
