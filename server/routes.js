@@ -1,4 +1,13 @@
-//const db = require('../database/index.js');
-const url = require('url');
-const path = require('path');
-const bodyParser = require ('body-parser');
+const {Items} = require('../database/schema.js');
+
+// Search for items by category
+exports.Search = (req, res) => {
+  const {query} = req.query;
+  Items.find({category: query}).exec((err, items) => {
+    if (err) {
+      console.error(err);
+    } else {
+      res.json(items);
+    }
+  });
+};
