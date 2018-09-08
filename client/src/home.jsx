@@ -2,7 +2,7 @@ import React, {Component}from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
 
-import List from "./components/search/list.js";
+import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 
 class Home extends Component {
@@ -18,6 +18,7 @@ class Home extends Component {
     $.ajax({
       url: '/items',
       success: (data) => {
+        console.log(this.state.items);
         console.log("te montó");
         this.setState({
           items: data
@@ -45,7 +46,7 @@ render(){
       <div>Segunda Pata</div>
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
-      <List handleSubmit={this.handleSubmit}/>
+      <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
       </center>
       </div>
     )
