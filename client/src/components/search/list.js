@@ -1,7 +1,6 @@
 import React, {Component}from "react";
 
 
-
 class List extends React.Component {
         constructor(props) {
             super(props);
@@ -9,13 +8,11 @@ class List extends React.Component {
             this.handleChange = this.handleChange.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
         }
-
         handleChange(event) {
             this.setState({value: event.target.value});
         }
         handleSubmit(event) {
             alert('A name was submitted: ' + this.state.value);
-            // call search function & render
             event.preventDefault();
         }
         render() {
