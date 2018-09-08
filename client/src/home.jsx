@@ -1,5 +1,6 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
+import $ from "jquery";
 
 import MenuItem from "./components/search/menuItem.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
