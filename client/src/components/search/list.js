@@ -1,5 +1,4 @@
 import React, {Component}from "react";
-import Search from "./../../../../server/routes.js";
 
 
 class List extends React.Component {
