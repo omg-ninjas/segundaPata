@@ -1,0 +1,15 @@
+var schema = new Schema(
+{
+  id: ObjectId
+  username: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: string,
+  comments:[
+          {
+            user: string,
+            comment: string
+          }
+        ]
+});
