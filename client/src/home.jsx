@@ -1,10 +1,41 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
+import $ from "jquery";
 
-import MenuItem from "./components/search/menuItem.js";
+import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: '/items',
+      success: (data) => {
+        console.log(this.state.items);
+        console.log("te montó");
+        this.setState({
+          items: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
+  }
+
+
+ handleSubmit(){
+   console.log("doing something");
+ }
+
+
 render(){
   return(
     <div>
@@ -15,7 +46,7 @@ render(){
       <div>Segunda Pata</div>
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
-      <MenuItem/>
+      <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
       </center>
       </div>
     )
