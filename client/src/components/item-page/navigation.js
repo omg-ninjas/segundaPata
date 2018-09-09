@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <div class="headerStyle">
+    <div className="headerStyle">
           <ul>
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/item">Item</NavLink></li>
