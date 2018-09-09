@@ -3,7 +3,7 @@ html, body{
     background-color: #ffffff;
   }
 
-#banner{
+#banner  {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ html, body{
   height: 100%;
 }
 
-#banner p{
+#banner {
   text-align:center;
   font-size:20px;
   }
@@ -32,3 +32,15 @@ h4 {
   position: relative;
   color: #041D71;
 }
+
+
+
+.headerStyle ul {
+    background-color:#CFA1C9;
+    height: 100px;
+    font-family: Sansation;
+    font-weight: bold;
+    font-size: 21px;
+    space:20px
+  }
+  

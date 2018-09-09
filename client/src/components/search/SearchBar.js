@@ -14,17 +14,18 @@ class SearchBar extends React.Component {
             this.setState({value: event.target.value});
         }
         handleSubmit(event) {
-            alert('A name was submitted: ' + this.state.value);
+            // alert('A name was submitted: ' + this.state.value);
             event.preventDefault();
         }
         render() {
             return (
-                <form onSubmit={this.handleSubmit}>
-                <label> Name:
+                <form onSubmit={this.SearchBar}>
+                <label> Search:
                   <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </label>
                 <input type="submit" value="Submit" />
                 </form>
+
             );
         }
     }
