@@ -33,6 +33,19 @@ class Home extends Component {
 
  handleSubmit(){
    console.log("doing something");
+   $.ajax({
+     url: '/items',
+     success: (data) => {
+       console.log(this.state.items);
+       console.log("te montó");
+       this.setState({
+         items: data
+       })
+     },
+     error: (err) => {
+       console.log('err', err);
+     }
+   });
  }
 
 
