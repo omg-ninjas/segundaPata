@@ -7,6 +7,6 @@ return (
 Hola Select
     </div>
 
- );
+);
 };
 export default Select;
