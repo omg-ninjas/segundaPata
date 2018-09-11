@@ -20,9 +20,10 @@ class Home extends Component {
       url: '/items',
       success: (data) => {
         console.log(this.state.items);
-        console.log("te montó");
+        console.log("database mounted");
         this.setState({
-          items: data
+          items: data,
+          product: undefined
         })
       },
       error: (err) => {
@@ -32,10 +33,13 @@ class Home extends Component {
   }
 
 
- handleSubmit(){
-   console.log("doing something");
- }
-
+  handleSubmit(){
+     var randomIndex = Math.floor(Math.random() * 2)
+     var product = this.state.items[randomIndex]
+     this.setState({
+       product: product
+     })
+   }
 
 render(){
   return(
