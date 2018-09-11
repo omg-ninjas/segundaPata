@@ -11,6 +11,7 @@ class Home extends Component {
     super(props);
     this.state = {
       items: [],
+      products: undefined
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -32,7 +33,13 @@ class Home extends Component {
     });
   }
 
-
+  // handleButton(){
+  //     let randomIndex = Math.floor(Math.random() * 30)
+  //     let fortune = this.state.items[randomIndex]
+  //     this.setState({
+  //       fortune: fortune
+  //     })
+  //   }
 
  handleSubmit(){
    console.log("doing something");
@@ -41,14 +48,19 @@ class Home extends Component {
      success: (data) => {
        console.log(this.state.items);
        console.log("te montó");
+
        this.setState({
-         items: data
+         products: products,
        })
      },
      error: (err) => {
        console.log('err', err);
      }
    });
+   var products = this.state.items;
+   this.setState({
+     items: products
+   })
  }
 
 
