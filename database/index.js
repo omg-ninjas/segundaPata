@@ -13,8 +13,21 @@ var selectAll = function(callback) {
       callback(err, null);
     } else {
       callback(null, results);
+      console.log("database sending good vibes")
     }
   });
 };
+
+// var selectJuguetes = function(callback) {
+//   connection.query('SELECT * FROM items WHERE category IN ('jugete')', function(err, results, fields) {
+//     if(err) {
+//       callback(err, null);
+//     } else {
+//       callback(null, results);
+//     }
+//   });
+// };
+
+
 
 module.exports.selectAll = selectAll;

@@ -17,48 +17,20 @@ class Home extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/items',
-      success: (data) => {
-        console.log(this.state.items);
-        console.log("database mounted");
-        this.setState({
-          items: data,
-          product: undefined
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
-
-  // handleButton(){
-  //     let randomIndex = Math.floor(Math.random() * 30)
-  //     let fortune = this.state.items[randomIndex]
-  //     this.setState({
-  //       fortune: fortune
-  //     })
-  //   }
+    componentDidMount() {
+      axios.get('/items')
+      .then(res => {
+        const items = res.data;
+        this.setState({ items });
+      })
+    }
 
  handleSubmit(){
-   $.ajax({
-     url: '/items',
-     success: (data) => {
-       console.log(this.state.items);
-      console.log("handleSubmit");
-      var products= this.state.items;
-       this.setState({
-         items: data,
-         products: products
-       })
-     },
-
-     error: (err) => {
-     console.log('err', err);
-     }
-   });
+  axios.get('/items')
+  .then(res => {
+   var products = res.data;
+    this.setState({products});
+  })
  }
 
 render(){
