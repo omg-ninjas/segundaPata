@@ -20,6 +20,7 @@ class SearchBar extends React.Component {
         render() {
             return (
             <div>
+
       <button onClick={this.props.handleSubmit} className="js-boton" data-type="bold"><span className="glyphicon glyphicon-bold">Clothes</span></button>
 
       <button className="js-botonn" data-type="italic"><span className="glyphicon glyphicon-italic">Toys</span></button>
@@ -27,7 +28,7 @@ class SearchBar extends React.Component {
       <button className="js-boto" data-type="justifyLeft"><span className="glyphicon glyphicon-align-left">Beds</span></button>
 
       <button className="js-botonq" data-type="justifyCenter"><span className="glyphicon glyphicon-align-center">Accessories</span></button>
-
+      
             </div>
             );
         }
