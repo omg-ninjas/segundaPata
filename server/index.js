@@ -14,11 +14,12 @@ app.get('/items', function (req, res) {
     if(err) {
       res.sendStatus(500);
     } else {
-      console.log("hi i love u")
+      console.log("get all items request performed")
       res.json(data);
     }
   });
 });
+
 
 
 app.listen(3000, function() {
