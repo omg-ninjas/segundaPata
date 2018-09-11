@@ -14,25 +14,38 @@ class Home extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/items',
-      success: (data) => {
-        console.log(this.state.items);
-        console.log("te montó");
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
+  // componentDidMount() {
+  //   $.ajax({
+  //     url: '/items',
+  //     success: (data) => {
+  //       console.log(this.state.items);
+  //       console.log("te montó");
+  //       this.setState({
+  //         items: data
+  //       })
+  //     },
+  //     error: (err) => {
+  //       console.log('err', err);
+  //     }
+  //   });
+  // }
 
 
  handleSubmit(){
    console.log("doing something");
+   $.ajax({
+     url: '/items',
+     success: (data) => {
+       console.log(this.state.items);
+       console.log("te montó");
+       this.setState({
+         items: data
+       })
+     },
+     error: (err) => {
+       console.log('err', err);
+     }
+   });
  }
 
 
