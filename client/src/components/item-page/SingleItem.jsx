@@ -1,7 +1,7 @@
 import React from "react";
 
 const SingleItem = props => (
-  <div>{`${props.item.description} ${props.item.quantity}`}</div>
+  <div>{`${props.item.name} ${props.item.price}`}</div>
 );
 
 export default SingleItem;

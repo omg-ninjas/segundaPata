@@ -1,16 +1,18 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
+import axios from "axios";
 
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
-import ItemsHome from "./components/ItemsHome.js"
+import ItemsHome from "./components/ItemsHome.js";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
+      products: undefined
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -32,25 +34,32 @@ class Home extends Component {
     });
   }
 
-
+  // handleButton(){
+  //     let randomIndex = Math.floor(Math.random() * 30)
+  //     let fortune = this.state.items[randomIndex]
+  //     this.setState({
+  //       fortune: fortune
+  //     })
+  //   }
 
  handleSubmit(){
-   console.log("doing something");
    $.ajax({
      url: '/items',
      success: (data) => {
        console.log(this.state.items);
-       console.log("te montó");
+      console.log("handleSubmit");
+      var products= this.state.items;
        this.setState({
-         items: data
+         items: data,
+         products: products
        })
      },
+
      error: (err) => {
-       console.log('err', err);
+     console.log('err', err);
      }
    });
  }
-
 
 render(){
   return(
@@ -63,7 +72,7 @@ render(){
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
-      <ItemsHome items={this.state.items}/>
+      <ItemsHome items={this.state.items} products={this.state.products}/>
       </center>
       </div>
     )
