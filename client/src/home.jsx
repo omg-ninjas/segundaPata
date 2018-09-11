@@ -4,6 +4,7 @@ import $ from "jquery";
 
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
+import ItemsHome from "./components/ItemsHome.js"
 
 class Home extends Component {
   constructor(props) {
@@ -14,21 +15,23 @@ class Home extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: '/items',
-  //     success: (data) => {
-  //       console.log(this.state.items);
-  //       console.log("te montó");
-  //       this.setState({
-  //         items: data
-  //       })
-  //     },
-  //     error: (err) => {
-  //       console.log('err', err);
-  //     }
-  //   });
-  // }
+  componentDidMount() {
+    $.ajax({
+      url: '/items',
+      success: (data) => {
+        console.log(this.state.items);
+        console.log("database mounted");
+        this.setState({
+          items: data,
+          product: undefined
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
+  }
+
 
 
  handleSubmit(){
@@ -60,6 +63,7 @@ render(){
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
+      <ItemsHome items={this.state.items}/>
       </center>
       </div>
     )
