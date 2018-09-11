@@ -33,13 +33,24 @@ class Home extends Component {
   }
 
 
-  handleSubmit(){
-     var randomIndex = Math.floor(Math.random() * 2)
-     var product = this.state.items[randomIndex]
-     this.setState({
-       product: product
-     })
-   }
+
+ handleSubmit(){
+   console.log("doing something");
+   $.ajax({
+     url: '/items',
+     success: (data) => {
+       console.log(this.state.items);
+       console.log("te montó");
+       this.setState({
+         items: data
+       })
+     },
+     error: (err) => {
+       console.log('err', err);
+     }
+   });
+ }
+
 
 render(){
   return(

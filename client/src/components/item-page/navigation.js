@@ -3,13 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <div>
-    <h2>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/item">Item</NavLink>
-    </h2>
+    <div className="headerStyle">
+          <ul>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/item">Item</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+          </ul>
     </div>
   );
-};
+}
+
 
 export default Navigation;
