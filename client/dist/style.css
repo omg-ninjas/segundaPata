@@ -32,16 +32,19 @@ h4 {
   position: relative;
   color: #041D71;
 }
+.headerStyle {
+  background-color: #81BF3B ;
+  overflow: hidden;
+}
 
 
-
-.headerStyle ul {
-    background-color:#B3F931 ;
-    height: 100px;
-    font-family: Sansation;
-    font-weight: bold;
-    font-size: 21px;
-    space:20px
+.headerStyle ul a {
+  float: left;
+  color: #921104;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px;
   }
   .js-boton{
     color: #048009 ;

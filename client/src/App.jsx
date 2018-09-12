@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import ItemPage from "./components/item-page/ItemPage.jsx";
-import Select from "./components/item-page/select.js";
+import Upload from "./components/item-page/Upload.js";
 import Error from "./components/item-page/error.js";
 import Navigation from "./components/item-page/navigation.js";
 import Home from "./home.jsx";
@@ -18,8 +18,7 @@ class App extends Component {
             <Route path="/" component={Home} exact />
             <Route path="/item" component={ItemPage} />
             <Route path="/select" component={Select} />
-
-
+            <Route path="/Upload" component={Upload} />
             <Route  component={Error} />
 
           </Switch>

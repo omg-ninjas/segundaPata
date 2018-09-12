@@ -3,14 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <div className="headerStyle">
+    <div>
+    <nav className="headerStyle">
           <ul>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/item">Item</NavLink></li>
-          <li><NavLink to="/select">Select</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/item">Item</NavLink>
+          <NavLink to="/Upload">Upload</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
           </ul>
-    </div>
+    </nav>
+   </div>
   );
 }
 
