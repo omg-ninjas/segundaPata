@@ -28,7 +28,7 @@ class SearchBar extends React.Component {
       <button className="js-boto" data-type="justifyLeft"><span className="glyphicon glyphicon-align-left">Beds</span></button>
 
       <button className="js-botonq" data-type="justifyCenter"><span className="glyphicon glyphicon-align-center">Accessories</span></button>
-      
+
             </div>
             );
         }
