@@ -12,7 +12,8 @@ class Home extends Component {
     super(props);
     this.state = {
       items: [],
-      products: undefined
+      products: undefined,
+      product: undefined
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -45,6 +46,7 @@ render(){
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
       <ItemsHome items={this.state.items} products={this.state.products}/>
+      <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
       </center>
       </div>
     )

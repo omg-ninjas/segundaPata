@@ -2,7 +2,7 @@ import React from "react";
 import SingleItem from "./SingleItem.jsx";
 import { Switch, Route } from 'react-router-dom';
 
-const ItemPage = ({ match },props) => (
+const ItemPage = ({ match }, props) => (
   <div className="Product">
     <main>
       <Switch>
