@@ -1,40 +1,37 @@
 import React, {Component}from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
+import axios from "axios";
 
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
+import ItemsHome from "./components/ItemsHome.js";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
+      products: undefined
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/items',
-      success: (data) => {
-        console.log(this.state.items);
-        console.log("te montó");
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
-
+    componentDidMount() {
+      axios.get('/items')
+      .then(res => {
+        const items = res.data;
+        this.setState({ items });
+      })
+    }
 
  handleSubmit(){
-   console.log("doing something");
+  axios.get('/items')
+  .then(res => {
+   var products = res.data;
+    this.setState({products});
+  })
  }
-
 
 render(){
   return(
@@ -47,6 +44,7 @@ render(){
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
+      <ItemsHome items={this.state.items} products={this.state.products}/>
       </center>
       </div>
     )

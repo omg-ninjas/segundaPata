@@ -3,7 +3,7 @@ html, body{
     background-color: #ffffff;
   }
 
-#banner{
+#banner  {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ html, body{
   height: 100%;
 }
 
-#banner p{
+#banner {
   text-align:center;
   font-size:20px;
   }
@@ -32,3 +32,38 @@ h4 {
   position: relative;
   color: #041D71;
 }
+.headerStyle {
+  background-color: #81BF3B ;
+  overflow: hidden;
+}
+
+
+.headerStyle ul a {
+  float: left;
+  color: #921104;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  }
+  .js-boton{
+    color: #048009 ;
+     font-size: 17px;
+  }
+
+  .js-botonn{
+    color: #8D0E93;
+     font-size: 17px;
+  }
+   .js-botonq{
+     color: #086895;
+      font-size: 17px;
+  }
+    .js-boto{
+      color: #C4230D;
+       font-size: 17px;
+  }
+  p { margin: 2em; }
+button { background-color: #F1D64A; color: #0DFA11; }
+button:hover { background-color: LightSteelBlue; }
+button:active { background-color: SteelBlue; color: White;
