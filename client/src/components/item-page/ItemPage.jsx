@@ -1,11 +1,19 @@
 import React from "react";
 import SingleItem from "./SingleItem.jsx";
+import { Switch, Route } from 'react-router-dom';
 
-const ItemPage = props => (
-  <div>
-    {props.items.map((item, id) => (
-      <SingleItem item={item} key={id} />
-    ))}
+const ItemPage = ({ match }) => (
+  <div className="Product">
+    <div>
+    </div>
+    <div>
+    </div>
+    <main>
+      <Switch>
+        <Route path={`${match.url}:/id`} component={SingleItem} />
+      </Switch>
+    </main>
   </div>
-);
-export default ItemPage;
+)
+
+export default PrimaryLayout;
