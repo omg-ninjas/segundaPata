@@ -1,12 +1,5 @@
-import React from "react";
+//import axios from "axios";
 
+//class Select extendes
 
-const Select =()=>{
-return (
-    <div>
-Hola Select
-    </div>
-
-);
-};
-export default Select;
+//export default Select;
