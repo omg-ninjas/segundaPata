@@ -15,6 +15,7 @@ class Home extends Component {
       products: undefined,
       product: undefined
     }
+    this.setProduct = this.setProduct.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -34,19 +35,31 @@ class Home extends Component {
   })
  }
 
+setProduct(id){
+  this.setState({
+    product: id
+  })
+}
+
+// postItem(){
+//   axios.post('item', {
+//   name: name
+// })
+// }
+
 render(){
   return(
     <div>
   <center>
 
     <h1>
+    <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
   <a href="https://imgur.com/rTcOFGo"><img src="https://i.imgur.com/rTcOFGo.jpg" title="source: imgur.com" /></a>
       <div>Segunda Pata</div>
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
-      <ItemsHome items={this.state.items} products={this.state.products}/>
-      <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+      <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
       </div>
     )
