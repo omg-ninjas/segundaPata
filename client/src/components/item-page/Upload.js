@@ -1,6 +1,14 @@
 import axios from "axios";
 import React from "react";
 
+/*
+dependemcias de material ui
+*/
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+
 class Upload extends React.Component {
   constructor(props) {
     super(props);
@@ -21,8 +29,7 @@ class Upload extends React.Component {
 
   render() {
     return (
-
-    <div className = "data">
+      <div className = "data">
       <form onSubmit={this.props.handleSubmit}>
         <label className = "data">
         Categoria:
@@ -41,7 +48,6 @@ class Upload extends React.Component {
         </label>
         </form>
         </div>
-
       );
     }
   }

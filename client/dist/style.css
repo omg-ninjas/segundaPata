@@ -1,6 +1,7 @@
 html, body{
     height:100%;
     background-color: #ffffff;
+
   }
 
 #banner  {
@@ -18,11 +19,13 @@ html, body{
 
 h1 {
   position: relative;
-  color: #A71473;
+  color: #139AA7;
 }
 h2 {
   position: relative;
-  color: #6BA714;
+  color: #DA8A71;
+
+
 }
 h3 {
   position: relative;
@@ -34,8 +37,10 @@ h4 {
 }
 
 .headerStyle {
-  background-color: #81BF3B ;
+
+  background-color: #A2C5C9;
   overflow: hidden;
+
 }
 
 
@@ -47,32 +52,23 @@ h4 {
   text-decoration: none;
   font-size: 25px;
   }
-  .js-boton{
-    color: #048009 ;
-     font-size: 17px;
-  }
 
-  .js-botonn{
-    color: #8D0E93;
-     font-size: 17px;
-  }
-   .js-botonq{
-     color: #086895;
-      font-size: 17px;
-  }
-    .js-boto{
-      color: #C4230D;
-       font-size: 17px;
-  }
+
+
   p { margin: 2em; }
-button { background-color: #F1D64A; color: #0DFA11; }
+  button{font-size: 17px;}
+button { background-color: #F2C7D6; color: #35424B; }
 button:hover { background-color: LightSteelBlue; }
 button:active { background-color: SteelBlue; color: White;
+
 }
     .data{
-      display:inline-block;
-  		vertical-align:middle;
-  		line-height:normal;
 
-
+      font-size:15px;
+       font-family:Verdana,Helvetica;
+       font-weight:bold;
+       color:#35424B;
+       border:0px;
+       width:120px;
+       height:25px;
 }
