@@ -17,7 +17,6 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/item" component={ItemPage} />
-            <Route path="/select" component={Select} />
             <Route path="/Upload" component={Upload} />
             <Route  component={Error} />
 

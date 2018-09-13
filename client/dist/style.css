@@ -32,6 +32,7 @@ h4 {
   position: relative;
   color: #041D71;
 }
+
 .headerStyle {
   background-color: #81BF3B ;
   overflow: hidden;
@@ -67,3 +68,11 @@ h4 {
 button { background-color: #F1D64A; color: #0DFA11; }
 button:hover { background-color: LightSteelBlue; }
 button:active { background-color: SteelBlue; color: White;
+}
+    .data{
+      display:inline-block;
+  		vertical-align:middle;
+  		line-height:normal;
+
+
+}
