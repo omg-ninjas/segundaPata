@@ -15,8 +15,9 @@ class App extends Component {
         <div>
           <Navigation />
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/item" component={ItemPage} />
+            <Route exact path="/" component={Home} />
+            <Route path="/item/:id" component={ItemPage} />
+
             <Route path="/Upload" component={Upload} />
             <Route  component={Error} />
 

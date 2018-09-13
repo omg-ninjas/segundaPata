@@ -13,7 +13,7 @@ var selectAll = function(callback) {
       callback(err, null);
     } else {
       callback(null, results);
-      console.log("database sending good vibes")
+      console.log("database sending good vibes to bruno")
     }
   });
 };

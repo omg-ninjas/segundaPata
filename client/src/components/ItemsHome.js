@@ -7,7 +7,7 @@ const ItemsHome = (props) => (
     { props.products ?
       <div>
         {props.products.map((item, id) => (
-          <SingleItem item={item} key={id} />
+          <SingleItem item={item} key={id} setProduct={props.setProduct}/>
         ))}
       </div>
     : <p>"aquí van imágenes de perritos bn cute"</p> }
