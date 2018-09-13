@@ -21,13 +21,13 @@ class SearchBar extends React.Component {
             return (
             <div>
 
-      <button onClick={this.props.handleSubmit} className="js-boton" data-type="bold"><span className="glyphicon glyphicon-bold">Clothes</span></button>
+      <button onClick={this.props.handleSubmit} data-type="bold"><span >Clothes</span></button>
 
-      <button className="js-botonn" data-type="italic"><span className="glyphicon glyphicon-italic">Toys</span></button>
+      <button  data-type="italic"><span>Toys</span></button>
 
-      <button className="js-boto" data-type="justifyLeft"><span className="glyphicon glyphicon-align-left">Beds</span></button>
+      <button data-type="justifyLeft"><span>Beds</span></button>
 
-      <button className="js-botonq" data-type="justifyCenter"><span className="glyphicon glyphicon-align-center">Accessories</span></button>
+      <button  data-type="justifyCenter"><span>Accessories</span></button>
 
             </div>
             );

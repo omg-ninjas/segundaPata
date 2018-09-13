@@ -53,8 +53,9 @@ render(){
   <center>
 
     <h1>
-    <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-  <a href="https://imgur.com/rTcOFGo"><img src="https://i.imgur.com/rTcOFGo.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="source: imgur.com" /></a>
+
       <div>Segunda Pata</div>
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
