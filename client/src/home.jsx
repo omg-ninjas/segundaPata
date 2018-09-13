@@ -12,8 +12,10 @@ class Home extends Component {
     super(props);
     this.state = {
       items: [],
-      products: undefined
+      products: undefined,
+      product: undefined
     }
+    this.setProduct = this.setProduct.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -33,18 +35,32 @@ class Home extends Component {
   })
  }
 
+setProduct(id){
+  this.setState({
+    product: id
+  })
+}
+
+// postItem(){
+//   axios.post('item', {
+//   name: name
+// })
+// }
+
 render(){
   return(
     <div>
   <center>
 
     <h1>
+
 <a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="source: imgur.com" /></a>
+
       <div>Segunda Pata</div>
     </h1>
       <h2>Vende y Compra Accesorios, para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
-      <ItemsHome items={this.state.items} products={this.state.products}/>
+      <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
       </div>
     )
