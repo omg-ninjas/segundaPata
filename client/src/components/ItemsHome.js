@@ -10,7 +10,7 @@ const ItemsHome = (props) => (
           <SingleItem item={item} key={id} setProduct={props.setProduct}/>
         ))}
       </div>
-    : <p>"aquí van imágenes de perritos bn cute"</p> }
+    : <div><img src="https://img.chewy.com/is/image/catalog/117128_MAIN._AC_SL400_V1533916341_.jpg" alt="aquí van imagenes de perritos bien cute" /></div> }
   </div>
 )
 

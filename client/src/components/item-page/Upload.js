@@ -29,7 +29,7 @@ class Upload extends React.Component {
         <label className = "data">
         Categoria:
           <select value={this.state.value} onChange={this.handleChange}>
-            <option value="Clother">Clother</option>
+            <option value="Clother">Clothes</option>
             <option value="Toys">Toys</option>
             <option value="Beds">Beds</option>
             <option value="Accessories">Accessories</option>
