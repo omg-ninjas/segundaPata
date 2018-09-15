@@ -63,7 +63,7 @@ render(){
 
     <h1>
 
-<a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="Una pagina para tus mascotas!" /></a>
 
       <div>Segunda Pata</div>
     </h1>
