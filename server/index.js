@@ -20,7 +20,7 @@ app.get('/items', function (req, res) {
   });
 });
 
-app.post("/item", function(req, res) {
+app.post("/items", function(req, res) {
   let name = req.body.name;
   let description = req.body.description;
   let price = req.body.price;
