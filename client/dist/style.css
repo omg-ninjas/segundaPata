@@ -37,20 +37,24 @@ h4 {
 }
 
 .headerStyle {
-
   background-color: #A2C5C9;
   overflow: hidden;
+  text-align:center;
 
 }
 
 
 .headerStyle ul a {
-  float: left;
-  color: #921104;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-  font-size: 25px;
+  display:inline-block;
+  	color:#fff;
+  	text-decoration:none;
+  	padding:10px 20px;
+  	line-height:normal;
+  	font-size:20px;
+  	font-weight:bold;
+  	-webkit-transition:all 500ms ease;
+  	-o-transition:all 500ms ease;
+  	transition:all 500ms ease;
   }
 
 
@@ -63,7 +67,6 @@ button:active { background-color: SteelBlue; color: White;
 
 }
     .data{
-
       font-size:15px;
        font-family:Verdana,Helvetica;
        font-weight:bold;
