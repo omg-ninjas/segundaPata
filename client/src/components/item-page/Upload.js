@@ -13,12 +13,14 @@ class Upload extends React.Component {
     this.handleUpload = this.handleUpload.bind(this);
   }
 
+
+
   handleChange(event) {
     this.setState({value: event.target.value});
   }
 
   handleUpload(event) {
-    alert('gracias por usar Segunda Pata:' + this.state.value);
+    alert('Tu producto ha sido enviado con éxito');
     event.preventDefault();
   }
 

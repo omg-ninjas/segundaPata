@@ -56,6 +56,22 @@ setProduct(id){
 // })
 // }
 
+addItem(item, number) {
+  fetch("/items", {
+    method: "POST",
+    body: JSON.stringify({
+      description: item,
+      quantity: number
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+    .then(() => this.getGroceryList())
+    .catch(error => console.error("Error:", error));
+}
+
+
 render(){
   return(
     <div>
@@ -63,11 +79,11 @@ render(){
 
     <h1>
 
-<a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="source: imgur.com" /></a>
+<a><img src="https://i.imgur.com/hxDOW9A.jpg" /></a>
 
       <div>Segunda Pata</div>
     </h1>
-      <h2>Vende y Compra Accesorios, para Mascotas.</h2>
+      <h2>Vende y Compra Accesorios para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
       <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
