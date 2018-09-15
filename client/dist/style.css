@@ -75,3 +75,7 @@ button:active { background-color: SteelBlue; color: White;
        width:120px;
        height:25px;
 }
+
+img {
+    border-radius: 50px;
+}
