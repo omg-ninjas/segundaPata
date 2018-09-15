@@ -6,6 +6,7 @@ import axios from "axios";
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
+import Upload from "./components/item-page/Upload.js";
 
 class Home extends Component {
   constructor(props) {
@@ -41,9 +42,17 @@ setProduct(id){
   })
 }
 
-// postItem(){
+// postItem(Upload){
 //   axios.post('item', {
-//   name: name
+//   newUpload = {
+//     name: "",
+//     description:"",
+//     price:"",
+//     category:"",
+//     email:"",
+//     vendor:""
+//
+//   }
 // })
 // }
 
