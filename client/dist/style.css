@@ -17,9 +17,11 @@ html, body{
   font-size:20px;
   }
 
+
 h1 {
   position: relative;
   color: #139AA7;
+
 }
 h2 {
   position: relative;
@@ -75,6 +77,12 @@ button:active { background-color: SteelBlue; color: White;
        width:120px;
        height:25px;
 }
+
+
+img {
+    border-radius: 50px;
+}
+
 .itemspage h2 {
   color: #35424B;
   background: #A59BB6;
@@ -108,3 +116,4 @@ button:active { background-color: SteelBlue; color: White;
   font-size: 1rem;
   transition: all 0.3s;
    }
+
