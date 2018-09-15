@@ -25,9 +25,9 @@ class ItemPage extends Component {
     <div>
     { this.state.products ?
       <span>
-      {`${this.state.products[parseInt(this.props.match.params.id)].name}
-        ${this.state.products[parseInt(this.props.match.params.id)].description}
-        ${this.state.products[parseInt(this.props.match.params.id)].price}
+      {`${this.state.products[parseInt(this.props.match.params.id)-1].name}
+        ${this.state.products[parseInt(this.props.match.params.id)-1].description}
+        ${this.state.products[parseInt(this.props.match.params.id)-1].price}
       `}
       </span>
     : <main>
