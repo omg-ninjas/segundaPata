@@ -6,7 +6,7 @@ import axios from "axios";
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
-import Upload from "./components/item-page/Upload.js";
+import UploadProduct from "./components/UploadProduct.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -56,6 +56,7 @@ setProduct(id){
 // })
 // }
 
+
 render(){
   return(
     <div>
@@ -63,11 +64,11 @@ render(){
 
     <h1>
 
-<a href="https://imgur.com/hxDOW9A"><img src="https://i.imgur.com/hxDOW9A.jpg" title="source: imgur.com" /></a>
+<a><img src="https://i.imgur.com/hxDOW9A.jpg" /></a>
 
       <div>Segunda Pata</div>
     </h1>
-      <h2>Vende y Compra Accesorios, para Mascotas.</h2>
+      <h2>Vende y Compra Accesorios para Mascotas.</h2>
       <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
       <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
