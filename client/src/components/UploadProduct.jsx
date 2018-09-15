@@ -1,4 +1,5 @@
 import React from "react";
+//import Home from "./home.jsx";
 
 class UploadProduct extends React.Component {
   constructor(props) {
@@ -9,14 +10,15 @@ class UploadProduct extends React.Component {
       precio: "",
       categoria: "",
       email: "",
-      vendedor: ""    
+      vendedor: ""
     };
     this.handleName = this.handleName.bind(this);
-    this.handleDescription = this.handleDescription.bind(this);
-    this.handlePrice = this.handleDescription.bind(this);
+    this.handleDescripcion = this.handleDescripcion.bind(this);
+    this.handlePrice = this.handlePrice.bind(this);
     this.handleMail = this.handleMail.bind(this);
     this.handleVendor = this.handleVendor.bind(this);
     this.submitItem = this.submitItem.bind(this);
+    this.addItem = this.addItem.bind(this);
   }
 
   handleName(e) {
@@ -26,7 +28,7 @@ class UploadProduct extends React.Component {
     });
   }
 
-  handleDescription(e) {
+  handleDescripcion(e) {
     e.preventDefault();
     this.setState({
       descripcion: e.target.value
@@ -61,9 +63,30 @@ class UploadProduct extends React.Component {
     });
   }
 
+  addItem(name, description, precio, categoria, email, vendedor) {
+      fetch("/items", {
+        method: "POST",
+        body: JSON.stringify({
+          producto: name,
+          descripcion: description,
+          price: precio,
+          category: categoria,
+          email: email,
+          vendor: vendedor
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        // .then(() => this.getGroceryList())
+        // .catch(error => console.error("Error:", error));
+        alert('Tu producto ha sido enviado con éxito');
+        event.preventDefault(); //esto está todo roto
+    }
+
   submitItem(event) {
     event.preventDefault();
-    this.props.addItem(this.state.producto, this.state.descripcion, this.state.precio, this.state.categoria, this.state.email, this.state.vendor );
+    this.addItem(this.state.producto, this.state.descripcion, this.state.precio, this.state.categoria, this.state.email, this.state.vendor );
 
     this.setState({
       producto: "",
@@ -88,8 +111,8 @@ class UploadProduct extends React.Component {
         Describe brevemente el artículo:
         <input
           value={this.state.descripcion}
-          onChange={this.handleDescription}
           placeholder="Cuentas con 150 caracteres"
+          onChange={this.handleDescripcion}
         />
         < br/>
         ¿Cuál será el costo?:
@@ -120,10 +143,10 @@ class UploadProduct extends React.Component {
           onChange={this.handleDescription}
         />
         <br />
-        <button onClick={this.submitItem}>Add New Item</button>
+        <button onClick={this.submitItem}>¡Añadir Producto!</button>
       </div>
     );
   }
 }
 
-export default AddGrocery;
+export default UploadProduct;

@@ -6,7 +6,7 @@ import axios from "axios";
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
-import Upload from "./components/item-page/Upload.js";
+import UploadProduct from "./components/UploadProduct.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -55,21 +55,6 @@ setProduct(id){
 //   }
 // })
 // }
-
-addItem(item, number) {
-  fetch("/items", {
-    method: "POST",
-    body: JSON.stringify({
-      description: item,
-      quantity: number
-    }),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-    .then(() => this.getGroceryList())
-    .catch(error => console.error("Error:", error));
-}
 
 
 render(){

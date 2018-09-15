@@ -20,7 +20,7 @@ var selectAll = function(callback) {
 
 const insertProduct = function(description, quantity, cb) {
   connection.query(
-    'INSERT INTO items (name, description, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?),'
+    'INSERT INTO items (name, description, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?)',
     [name, description, price, category, email, vendor],
     (err, results, fields) => {
       if (err) {
@@ -37,3 +37,4 @@ const insertProduct = function(description, quantity, cb) {
 
 
 module.exports.selectAll = selectAll;
+module.exports.insertProduct = insertProduct;
