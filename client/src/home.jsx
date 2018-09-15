@@ -6,7 +6,7 @@ import axios from "axios";
 import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
-import Upload from "./components/item-page/Upload.js";
+import UploadProduct from "./components/UploadProduct.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -55,6 +55,7 @@ setProduct(id){
 //   }
 // })
 // }
+
 
 render(){
   return(

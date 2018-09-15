@@ -8,7 +8,6 @@ const Navigation = () => {
     <nav className="headerStyle">
           <ul>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/item">Item</NavLink>
           <NavLink to="/Upload">Upload</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           </ul>
