@@ -101,49 +101,53 @@ class UploadProduct extends React.Component {
   render() {
     return (
       <div>
-        ¿Qué quieres vender?:
+    <center><img src="https://www.aperrados.com/wp-content/uploads/2017/01/bulldog-ingles-700x452.jpeg" alt="aquí van imagenes de perritos bien cute" /></center>
+      <center className = "UploadProducts">
+
+      <h3>¿Qué quieres vender?:
         <input
           value={this.state.producto}
           placeholder="nombre del artículo"
           onChange={this.handleName}
-        />
+        /></h3>
         <br />
-        Describe brevemente el artículo:
+        <h3>Describe brevemente el artículo:
         <input
           value={this.state.descripcion}
           placeholder="Cuentas con 150 caracteres"
           onChange={this.handleDescripcion}
-        />
+        /></h3>
         < br/>
-        ¿Cuál será el costo?:
+        <h3>¿Cuál será el costo?:
         <input
           value={this.state.description}
           placeholder="No olvides especificar con el símbolo de $"
           onChange={this.handleDescription}
-        />
+        /></h3>
         <br />
-        Elige una categoría:
+      <h3>Elige una categoría:
         <input
           value={this.state.description}
           placeholder="Recuerda que son: juguetes, accesorios, cyc (camitas y casitas) y accesorios"
           onChange={this.handleDescription}
-        />
+        /></h3>
         <br />
-        Pásanos tu mail:
+        <h3>Pásanos tu mail:
         <input
           value={this.state.description}
           placeholder="Para ponerse en contacto contigo"
           onChange={this.handleDescription}
-        />
+        /></h3>
         <br />
-        ¿Cómo quieres que te llamemos?:
+        <h3>¿Cómo quieres que te llamemos?:
         <input
           value={this.state.description}
           placeholder="Éste será el nombre que otros vean"
           onChange={this.handleDescription}
-        />
+        /></h3>
         <br />
         <button onClick={this.submitItem}>¡Añadir Producto!</button>
+        </center>
       </div>
     );
   }

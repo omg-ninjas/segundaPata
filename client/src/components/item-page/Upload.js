@@ -24,6 +24,7 @@ class Upload extends React.Component {
 
   render() {
     return (
+      
       <div className = "data">
       <form onSubmit={this.props.handleUpload}>
         <label className = "data">
@@ -40,6 +41,7 @@ class Upload extends React.Component {
         <input type="submit" value="Submit" />
         </label>
         </form>
+
         </div>
       );
     }
