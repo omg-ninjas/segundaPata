@@ -19,6 +19,7 @@ class Home extends Component {
     this.setProduct = this.setProduct.bind(this);
     this.handleSubmitToys = this.handleSubmitToys.bind(this);
     this.handleSubmitClothes=this.handleSubmitClothes.bind(this);
+    this.handleSubmitBeds=this.handleSubmitBeds.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +43,15 @@ class Home extends Component {
  handleSubmitClothes(){
    //alert('toys called');
   axios.get('/clothes')
+  .then(res => {
+    console.log(res);
+   var products = res.data;
+    this.setState({products});
+  })
+ }
+ handleSubmitBeds(){
+   //alert('toys called');
+  axios.get('/beds')
   .then(res => {
     console.log(res);
    var products = res.data;
@@ -80,7 +90,7 @@ render(){
         </h1>
         <h2>Vende y Compra Accesorios, para Mascotas.</h2>
         <SearchBar items={this.state.items} handleSubmitToys={this.handleSubmitToys}
-        handleSubmitClothes={this.handleSubmitClothes}
+        handleSubmitClothes={this.handleSubmitClothes} handleSubmitBeds={this.handleSubmitBeds}
         />
         <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>

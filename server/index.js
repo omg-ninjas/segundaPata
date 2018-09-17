@@ -41,6 +41,18 @@ app.get('/clothes', function (req, res) {
   });
 });
 
+app.get('/beds', function (req, res) {
+  items.selectBeds(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all clothes request performed")
+      res.json(data);
+    }
+  });
+});
+
 app.post('/items', function(req, res) {
   console.log(req);
   let name = req.body.name;
