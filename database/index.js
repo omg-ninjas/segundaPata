@@ -13,15 +13,25 @@ var selectAll = function(callback) {
       callback(err, null);
     } else {
       callback(null, results);
-      console.log("database sending good vibes to bruno")
     }
   });
 };
 
-const insertProduct = function(name, description, price, category, email, vendor, callback) {
+var selectToys = function(callback) {
+  connection.query('SELECT * FROM items WHERE category = "juguetes"', function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
+const insertProduct = function(name, descrip, price, category, email, vendor, callback) {
+  console.log("quiubo desde la db");
   connection.query(
-    'INSERT INTO items (name, description, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?)',
-    [name, description, price, category, email, vendor],
+    'INSERT INTO items (name, descrip, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?)',
+    [name, descrip, price, category, email, vendor],
     (err, results, fields) => {
       if (err) {
         callback(err, null);

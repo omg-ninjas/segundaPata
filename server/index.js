@@ -1,12 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
- var items = require('../database/index.js');
-
-
+var items = require('../database/index.js');
 var app = express();
 
- app.use(express.static(__dirname + '/../client/dist'));
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../client/dist'));
 
 
 app.get('/items', function (req, res) {
@@ -19,11 +17,21 @@ app.get('/items', function (req, res) {
     }
   });
 });
+app.get('/toys', function (req, res) {
+  items.selectToys(function(err, data) {
+    if(err) {
+      res.sendStatus(500);
+    } else {
+      console.log("get all toys request performed")
+      res.json(data);
+    }
+  });
+});
 
-app.post("/items", function(req, res) {
-  console.log(req.body);
+app.post('/items', function(req, res) {
+  console.log(req);
   let name = req.body.name;
-  let description = req.body.description;
+  let descrip = req.body.descrip;
   let price = req.body.price;
   let category = req.body.category;
   let email = req.body.email;
@@ -32,7 +40,7 @@ app.post("/items", function(req, res) {
   if (!name) {
     res.sendStatus(400);
   } else {
-    items.insertProduct(name, description, price, category, email, vendor, (err, results) => {
+    items.insertProduct(name, descrip, price, category, email, vendor, (err, results) => {
       if (err) {
         res.sendStatus(500);
         console.log(name)
