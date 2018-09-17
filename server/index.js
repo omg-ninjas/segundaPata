@@ -20,6 +20,7 @@ app.get('/items', function (req, res) {
 app.get('/toys', function (req, res) {
   items.selectToys(function(err, data) {
     if(err) {
+      console.log(err);
       res.sendStatus(500);
     } else {
       console.log("get all toys request performed")
@@ -27,6 +28,43 @@ app.get('/toys', function (req, res) {
     }
   });
 });
+
+app.get('/clothes', function (req, res) {
+  items.selectClothes(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all clothes request performed")
+      res.json(data);
+    }
+  });
+});
+
+app.get('/beds', function (req, res) {
+  items.selectBeds(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all beds request performed")
+      res.json(data);
+    }
+  });
+});
+
+app.get('/accesories', function (req, res) {
+  items.selectAccesories(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all accesories request performed")
+      res.json(data);
+    }
+  });
+});
+
 
 app.post('/items', function(req, res) {
   console.log(req);
