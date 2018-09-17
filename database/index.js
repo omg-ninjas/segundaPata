@@ -17,15 +17,15 @@ var selectAll = function(callback) {
   });
 };
 
-var selectToys = function(callback) {
-  connection.query('SELECT * FROM items WHERE category = "juguetes"', function(err, results, fields) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, results);
-    }
-  });
-};
+// var selectToys = function(callback) {
+//   connection.query('SELECT * FROM items WHERE category IN ('juguete')', function(err, results, fields)) {
+//     if(err) {
+//       callback(err, null);
+//     } else {
+//       callback(null, results);
+//     }
+//   });
+// };
 
 const insertProduct = function(name, descrip, price, category, email, vendor, callback) {
   console.log("quiubo desde la db");
