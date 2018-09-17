@@ -18,16 +18,16 @@ var selectAll = function(callback) {
   });
 };
 
-const insertProduct = function(description, quantity, cb) {
+const insertProduct = function(name, description, price, category, email, vendor, callback) {
   connection.query(
     'INSERT INTO items (name, description, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?)',
     [name, description, price, category, email, vendor],
     (err, results, fields) => {
       if (err) {
-        cb(err, null);
+        callback(err, null);
       } else {
         console.log(results);
-        cb(null, results);
+        callback(null, results);
       }
     }
   );

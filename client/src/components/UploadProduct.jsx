@@ -5,18 +5,19 @@ class UploadProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      producto: "",
-      descripcion: "",
-      precio: "",
-      categoria: "",
+      name: "",
+      descripction: "",
+      price: "",
+      category: "",
       email: "",
-      vendedor: ""
+      vendor: ""
     };
     this.handleName = this.handleName.bind(this);
-    this.handleDescripcion = this.handleDescripcion.bind(this);
+    this.handleDescription = this.handleDescription.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
     this.handleMail = this.handleMail.bind(this);
     this.handleVendor = this.handleVendor.bind(this);
+    this.handleCategory = this.handleCategory.bind(this);
     this.submitItem = this.submitItem.bind(this);
     this.addItem = this.addItem.bind(this);
   }
@@ -24,21 +25,21 @@ class UploadProduct extends React.Component {
   handleName(e) {
     e.preventDefault();
     this.setState({
-      producto: e.target.value
+      name: e.target.value
     });
   }
 
-  handleDescripcion(e) {
+  handleDescription(e) {
     e.preventDefault();
     this.setState({
-      descripcion: e.target.value
+      description: e.target.value
     });
   }
 
   handlePrice(e) {
     e.preventDefault();
     this.setState({
-      precio: e.target.value
+      price: e.target.value
     });
   }
 
@@ -52,49 +53,49 @@ class UploadProduct extends React.Component {
   handleVendor(e) {
     e.preventDefault();
     this.setState({
-      vendedor: e.target.value
+      vendor: e.target.value
     });
   }
 
   handleCategory(e) {
     e.preventDefault();
     this.setState({
-      categoria: e.target.value
+      category: e.target.value
     });
   }
 
-  addItem(name, description, precio, categoria, email, vendedor) {
-      fetch("/items", {
+  addItem(name, description, price, category, email, vendor) {
+      fetch("http://localhost:3000/items", {
         method: "POST",
         body: JSON.stringify({
-          producto: name,
-          descripcion: description,
-          price: precio,
-          category: categoria,
+          name: name,
+          description: description,
+          price: price,
+          category: category,
           email: email,
-          vendor: vendedor
+          vendor: vendor
         }),
         headers: {
           "Content-Type": "application/json"
         }
       })
-        // .then(() => this.getGroceryList())
-        // .catch(error => console.error("Error:", error));
-        alert('Tu producto ha sido enviado con éxito');
-        event.preventDefault(); //esto está todo roto
+
+        .catch(error => console.error("Error:", error));
+        // alert('Tu producto ha sido enviado con éxito');
+        // event.preventDefault(); //esto está todo roto
     }
 
   submitItem(event) {
     event.preventDefault();
-    this.addItem(this.state.producto, this.state.descripcion, this.state.precio, this.state.categoria, this.state.email, this.state.vendor );
+    this.addItem(this.state.name, this.state.description, this.state.price, this.state.category, this.state.email, this.state.vendor );
 
     this.setState({
-      producto: "",
-      descripcion: "",
-      precio: "",
-      categoria: "",
+      name: "",
+      description: "",
+      price: "",
+      category: "",
       email: "",
-      vendedor: ""
+      vendor: ""
     });
   }
 
@@ -106,42 +107,43 @@ class UploadProduct extends React.Component {
 
       <h3>¿Qué quieres vender?:
         <input
-          value={this.state.producto}
+          value={this.state.name}
           placeholder="nombre del artículo"
           onChange={this.handleName}
         /></h3>
         <br />
         <h3>Describe brevemente el artículo:
         <input
-          value={this.state.descripcion}
+          value={this.state.description}
           placeholder="Cuentas con 150 caracteres"
           onChange={this.handleDescripcion}
         /></h3>
         < br/>
         <h3>¿Cuál será el costo?:
         <input
-          value={this.state.description}
+          value={this.state.price}
           placeholder="No olvides especificar con el símbolo de $"
           onChange={this.handleDescription}
         /></h3>
+
         <br />
       <h3>Elige una categoría:
         <input
-          value={this.state.description}
+          value={this.state.category}
           placeholder="Recuerda que son: juguetes, accesorios, cyc (camitas y casitas) y accesorios"
           onChange={this.handleDescription}
         /></h3>
         <br />
         <h3>Pásanos tu mail:
         <input
-          value={this.state.description}
+          value={this.state.mail}
           placeholder="Para ponerse en contacto contigo"
           onChange={this.handleDescription}
         /></h3>
         <br />
         <h3>¿Cómo quieres que te llamemos?:
         <input
-          value={this.state.description}
+          value={this.state.vendor}
           placeholder="Éste será el nombre que otros vean"
           onChange={this.handleDescription}
         /></h3>
