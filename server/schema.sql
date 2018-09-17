@@ -20,8 +20,8 @@ CREATE TABLE items (
  *  to create the database and the tables.*/
 
 INSERT INTO items (name, description, price, category, email, vendor) VALUES ("hueso mordido", "Hueso de dinosaurio súper sabroso, listo para morder", "$10.00", "juguetes", "juanito@cameil.com", "Juanito García");
-INSERT INTO items (name, description, price, category, email, vendor) VALUES ("camita suave", "50cm de diámetro, solo un dueño anterior", "$30.00", "cyc", "juanito@cameil.com", "Pamela Costa");
+INSERT INTO items (name, description, price, category, email, vendor) VALUES ("camita suave", "50cm de diámetro, solo un dueño anterior", "$30.00", "camitas", "juanito@cameil.com", "Pamela Costa");
 INSERT INTO items (name, description, price, category, email, vendor) VALUES ("casita de madera", "Para perro pequeño. Nuestro cachorro creció demasiado rápido!", "$10.00", "accesorios", "juanito@cameil.com", "Arnold Guadarrama");
-INSERT INTO items (name, description, price, category, email, vendor) VALUES ("comida pedigrí", "bolsa tamaño 400 oz", "$50.00", "otros", "juanito@cameil.com", "Amanda de la Costa");
-INSERT INTO items (name, description, price, category, email, vendor) VALUES ("zapato viejo", "de la marca nike, perfecto para morder, sabor a queso", "$10.00", "jugete", "juanito@cameil.com", "Alicia Maravillas");
+INSERT INTO items (name, description, price, category, email, vendor) VALUES ("comida pedigrí", "bolsa tamaño 400 oz", "$50.00", "accesorios", "juanito@cameil.com", "Amanda de la Costa");
+INSERT INTO items (name, description, price, category, email, vendor) VALUES ("zapato viejo", "de la marca nike, perfecto para morder, sabor a queso", "$10.00", "juguetes", "juanito@cameil.com", "Alicia Maravillas");
 INSERT INTO items (name, description, price, category, email, vendor) VALUES ("suéter a rayas", "tamaño Chihuahua, casi nuevo", "$25.00", "accesorios", "juanito@cameil.com", "Eduardo de León");
