@@ -13,7 +13,7 @@ class UploadProduct extends React.Component {
       vendor: ""
     };
     this.handleName = this.handleName.bind(this);
-    this.handleDescripcion = this.handleDescripcion.bind(this);
+    this.handleDescription = this.handleDescription.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
     this.handleMail = this.handleMail.bind(this);
     this.handleVendor = this.handleVendor.bind(this);
@@ -29,7 +29,7 @@ class UploadProduct extends React.Component {
     });
   }
 
-  handleDescripcion(e) {
+  handleDescription(e) {
     e.preventDefault();
     this.setState({
       description: e.target.value
@@ -64,8 +64,8 @@ class UploadProduct extends React.Component {
     });
   }
 
-  addItem(name, description, precio, categoria, email, vendedor) {
-      fetch("/items", {
+  addItem(name, description, price, category, email, vendor) {
+      fetch("http://localhost:3000/items", {
         method: "POST",
         body: JSON.stringify({
           name: name,
@@ -79,10 +79,10 @@ class UploadProduct extends React.Component {
           "Content-Type": "application/json"
         }
       })
-        // .then(() => this.getGroceryList())
-        // .catch(error => console.error("Error:", error));
-        alert('Tu producto ha sido enviado con éxito');
-        event.preventDefault(); //esto está todo roto
+
+        .catch(error => console.error("Error:", error));
+        // alert('Tu producto ha sido enviado con éxito');
+        // event.preventDefault(); //esto está todo roto
     }
 
   submitItem(event) {
@@ -113,7 +113,7 @@ class UploadProduct extends React.Component {
         <input
           value={this.state.description}
           placeholder="Cuentas con 150 caracteres"
-          onChange={this.handleDescripcion}
+          onChange={this.handleDescription}
         />
         < br/>
         ¿Cuál será el costo?:

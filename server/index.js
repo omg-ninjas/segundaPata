@@ -21,19 +21,21 @@ app.get('/items', function (req, res) {
 });
 
 app.post("/items", function(req, res) {
+  console.log(req.body);
   let name = req.body.name;
   let description = req.body.description;
   let price = req.body.price;
   let category = req.body.category;
   let email = req.body.email;
   let vendor = req.body.vendor;
-
+  console.log(name);
   if (!name) {
     res.sendStatus(400);
   } else {
-    items.insertProduct(name, description, price, category, email,vendor, (err, results) => {
+    items.insertProduct(name, description, price, category, email, vendor, (err, results) => {
       if (err) {
         res.sendStatus(500);
+        console.log(name)
       } else {
         res.status(200).json(results);
       }
