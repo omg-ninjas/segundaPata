@@ -20,9 +20,22 @@ app.get('/items', function (req, res) {
 app.get('/toys', function (req, res) {
   items.selectToys(function(err, data) {
     if(err) {
+      console.log(err);
       res.sendStatus(500);
     } else {
       console.log("get all toys request performed")
+      res.json(data);
+    }
+  });
+});
+
+app.get('/clothes', function (req, res) {
+  items.selectClothes(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all clothes request performed")
       res.json(data);
     }
   });

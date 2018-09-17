@@ -17,7 +17,7 @@ class Home extends Component {
       product: undefined
     }
     this.setProduct = this.setProduct.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmitToys = this.handleSubmitToys.bind(this)
   }
 
   componentDidMount() {
@@ -28,9 +28,11 @@ class Home extends Component {
     })
   }
 
- handleSubmit(){
-  axios.get('/items')
+ handleSubmitToys(){
+   //alert('toys called');
+  axios.get('/toys')
   .then(res => {
+    console.log(res);
    var products = res.data;
     this.setState({products});
   })
@@ -66,7 +68,9 @@ render(){
           <div>Segunda Pata</div>
         </h1>
         <h2>Vende y Compra Accesorios, para Mascotas.</h2>
-        <SearchBar items={this.state.items} handleSubmit={this.handleSubmit} />
+        <SearchBar items={this.state.items} handleSubmitToys={this.handleSubmitToys}
+
+        />
         <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
       <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
