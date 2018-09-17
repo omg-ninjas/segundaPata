@@ -47,6 +47,16 @@ var selectBeds = function(callback) {
   });
 };
 
+var selectAccesories = function(callback) {
+  connection.query('SELECT * FROM items WHERE category = "accesorios"', function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
 
 const insertProduct = function(name, descrip, price, category, email, vendor, callback) {
   console.log("quiubo desde la db");
@@ -72,3 +82,4 @@ module.exports.selectToys = selectToys;
 module.exports.insertProduct = insertProduct;
 module.exports.selectClothes = selectClothes;
 module.exports.selectBeds = selectBeds;
+module.exports.selectAccesories = selectAccesories;

@@ -47,11 +47,24 @@ app.get('/beds', function (req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log("get all clothes request performed")
+      console.log("get all beds request performed")
       res.json(data);
     }
   });
 });
+
+app.get('/accesories', function (req, res) {
+  items.selectAccesories(function(err, data) {
+    if(err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      console.log("get all accesories request performed")
+      res.json(data);
+    }
+  });
+});
+
 
 app.post('/items', function(req, res) {
   console.log(req);

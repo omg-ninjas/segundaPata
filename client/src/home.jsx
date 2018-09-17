@@ -20,6 +20,7 @@ class Home extends Component {
     this.handleSubmitToys = this.handleSubmitToys.bind(this);
     this.handleSubmitClothes=this.handleSubmitClothes.bind(this);
     this.handleSubmitBeds=this.handleSubmitBeds.bind(this);
+    this.handleSubmitAccesories= this.handleSubmitAccesories.bind(this);
   }
 
   componentDidMount() {
@@ -59,6 +60,16 @@ class Home extends Component {
   })
  }
 
+ handleSubmitAccesories(){
+   //alert('toys called');
+  axios.get('/accesories')
+  .then(res => {
+    console.log(res);
+   var products = res.data;
+    this.setState({products});
+  })
+ }
+
 setProduct(id){
   this.setState({
     product: id
@@ -91,6 +102,7 @@ render(){
         <h2>Vende y Compra Accesorios, para Mascotas.</h2>
         <SearchBar items={this.state.items} handleSubmitToys={this.handleSubmitToys}
         handleSubmitClothes={this.handleSubmitClothes} handleSubmitBeds={this.handleSubmitBeds}
+        handleSubmitAccesories={this.handleSubmitAccesories}
         />
         <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>

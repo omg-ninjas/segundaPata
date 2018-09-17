@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 
       <button onClick={this.props.handleSubmitBeds} data-type="justifyLeft"><span>Camitas</span></button>
 
-      <button  data-type="justifyCenter"><span>Accesorios</span></button>
+      <button onClick={this.props.handleSubmitAccesories} data-type="justifyCenter"><span>Accesorios</span></button>
 
             </div>
             );
