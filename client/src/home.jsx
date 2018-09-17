@@ -8,6 +8,7 @@ import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
 import UploadProduct from "./components/UploadProduct.jsx";
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -70,7 +71,6 @@ render(){
         <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
       <div className="fb-like" data-href="https://github.com/mambo-num-5" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-      </div>
     </div>
     )
   }

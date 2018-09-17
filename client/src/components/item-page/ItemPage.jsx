@@ -26,14 +26,14 @@ class ItemPage extends Component {
     { this.state.products ?
       <span>
 
-      <h2>{`${this.state.products[parseInt(this.props.match.params.id)].name}`}</h2>
-      <h3>{`${this.state.products[parseInt(this.props.match.params.id)].price}`}</h3>
-        <h4>{`${this.state.products[parseInt(this.props.match.params.id)].description}`}</h4>
+      <h2>{`${this.state.products[parseInt(this.props.match.params.id -1)].name}`}</h2>
+      <h3>{`${this.state.products[parseInt(this.props.match.params.id -1)].price}`}</h3>
+        <h4>{`${this.state.products[parseInt(this.props.match.params.id -1)].description}`}</h4>
 
       </span>
     : <main>
       <h1>"Render individual item page"</h1>
-    </main> }  
+    </main> }
   </div>
 
 )}
