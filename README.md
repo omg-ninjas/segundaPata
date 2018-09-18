@@ -14,5 +14,10 @@ Install NPM `npm install`<br>
 Install Webpack `npm install --save-dev webpack`<br>
 Install Babel `npm install babel-cli babel-core --save-dev`<br>
 
+<h3> How to run it </h3>
+
+nmp run start  
+npm run server 
+
 <h2>Authors</h2>
 The Team <br> https://github.com/mambo-num-5
