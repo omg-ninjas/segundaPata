@@ -116,6 +116,7 @@ class UploadProduct extends React.Component {
       email: "",
       vendor: ""
     });
+    alert('Success!')
   }
 
   render() {
@@ -169,7 +170,7 @@ class UploadProduct extends React.Component {
         <br />
         <button onClick={this.submitItem}>¡Añadir Producto!</button>
         </center>
-        
+
       </div>
     );
   }
