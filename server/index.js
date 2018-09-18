@@ -35,7 +35,6 @@ app.get('/clothes', function (req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log("get all clothes request performed")
       res.json(data);
     }
   });
@@ -47,7 +46,6 @@ app.get('/beds', function (req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log("get all beds request performed")
       res.json(data);
     }
   });
@@ -67,7 +65,6 @@ app.get('/accesories', function (req, res) {
 
 
 app.post('/items', function(req, res) {
-  console.log(req);
   let name = req.body.name;
   let descrip = req.body.descrip;
   let price = req.body.price;
@@ -81,7 +78,6 @@ app.post('/items', function(req, res) {
     items.insertProduct(name, descrip, price, category, email, vendor, (err, results) => {
       if (err) {
         res.sendStatus(500);
-        console.log(name)
       } else {
         res.status(200).json(results);
       }
