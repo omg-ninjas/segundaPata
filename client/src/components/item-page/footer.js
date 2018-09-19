@@ -20,7 +20,7 @@ class FooterPage extends React.Component {
                 className="text-center text-md-left mb-4 mb-md-0"
               >
                 <h4>
-                  Get connected with us on social networks!
+                  More information about us!
                 </h4>
               </Col>
               <Col
