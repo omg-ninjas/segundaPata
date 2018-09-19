@@ -21,7 +21,7 @@ class App extends Component {
             <Route path="/Upload" component={UploadProduct} />
             <Route  component={Error} />
           </Switch>
-          <Footer/>
+          <Footer />
         </div>
       </BrowserRouter>
     );
