@@ -11,7 +11,7 @@ class FooterPage extends React.Component {
         color="unique-color-dark"
         className="page-footer font-small pt-0"
       >
-        <div style={{ backgroundColor: "#2892D7" }}>
+        <div style={{ backgroundColor: "#000080" }}>
           <Container >
             <Row className="py-4 d-flex align-items-center">
               <Col
