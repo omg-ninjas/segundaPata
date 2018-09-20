@@ -17,11 +17,7 @@ class FooterPage extends React.Component {
               <Col
                 md="6"
                 lg="5"
-                className="text-center text-md-left mb-4 mb-md-0"
-              >
-                <h4>
-                  More information about us!
-                </h4>
+                className="text-center text-md-left mb-4 mb-md-0">
               </Col>
               <Col
                 md="6"
