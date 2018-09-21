@@ -8,6 +8,8 @@ import UploadProduct from "./components/UploadProduct.jsx";//client/src/componen
 import Error from "./components/item-page/error.js";
 import Navigation from "./components/item-page/navigation.js";
 import Home from "./home.jsx";
+import Info from "./components/Info";
+
 
 class App extends Component {
   render() {
@@ -19,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/item/:id" component={ItemPage} />
             <Route path="/Upload" component={UploadProduct} />
+            <Route path="/Info" component={Info} />
             <Route  component={Error} />
           </Switch>
           <Footer />
