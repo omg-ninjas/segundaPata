@@ -81,8 +81,10 @@ button:active { background-color: SteelBlue; color: White;
 
      img {
     border-radius: 50px;
-    vertical-align: text-top;
+   vertical-align: text-top;
 }
+
+
 
 .itemspage h2 {
   color: #35424B;
@@ -96,6 +98,18 @@ button:active { background-color: SteelBlue; color: White;
   transition: all 0.3s;
   width: 30%
  }
+
+   .num {
+      color: black;
+      font-size: 1.5rem;
+   }
+   .btn {
+   background-image: url("https://beginnersbook.com/wp-content/uploads/2013/09/fblike1.jpg");
+   background-size: 60px;
+   padding: 15px 28px;
+   border-width: 25;
+ }
+
  .itemspage h3 {
    color: #35424B;
    background: #F2C7D6;
