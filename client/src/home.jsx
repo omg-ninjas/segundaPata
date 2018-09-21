@@ -7,6 +7,7 @@ import SearchBar from "./components/search/SearchBar.js";
 import ItemPage from "./components/item-page/ItemPage.jsx";
 import ItemsHome from "./components/ItemsHome.js";
 import UploadProduct from "./components/UploadProduct.jsx";
+import LikeButton from "./components/item-page/likeButton.js";
 
 
 class Home extends Component {
@@ -15,7 +16,7 @@ class Home extends Component {
    this.state = {
      items: [],
      products: undefined,
-     product: undefined
+     product: undefined,
    }
    this.setProduct = this.setProduct.bind(this);
    this.handleSubmitToys = this.handleSubmitToys.bind(this);
@@ -95,6 +96,9 @@ setProduct(id){
 render(){
  return(
    <div>
+
+   <LikeButton />
+
      <center>
        <h1>
          <img src="https://i.imgur.com/hxDOW9A.jpg

@@ -62,8 +62,6 @@ app.get('/accesories', function (req, res) {
    }
  });
 });
-
-
 app.post('/items', function(req, res) {
  let name = req.body.name;
  let descrip = req.body.descrip;
