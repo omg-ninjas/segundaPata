@@ -20,7 +20,7 @@ and pass in null without incrementing */
 
 CREATE TABLE likeSaver (
   id int NOT NULL AUTO_INCREMENT,
-  likes integer NOT NULL,
+  likes int NOT NULL,
   PRIMARY KEY (ID)
 );
 
@@ -34,3 +34,5 @@ INSERT INTO items (name, descrip, price, category, email, vendor) VALUES ("casit
 INSERT INTO items (name, descrip, price, category, email, vendor) VALUES ("comida pedigrí", "bolsa tamaño 400 oz", "$50.00", "accesorios", "amanda@cameil.com", "Amanda de la Costa");
 INSERT INTO items (name, descrip, price, category, email, vendor) VALUES ("zapato viejo", "de la marca nike, perfecto para morder, sabor a queso", "$10.00", "juguetes", "alicia@cameil.com", "Alicia Maravillas");
 INSERT INTO items (name, descrip, price, category, email, vendor) VALUES ("suéter a rayas", "tamaño Chihuahua, casi nuevo", "$25.00", "ropa", "lalord@cameil.com", "Eduardo de León");
+
+INSERT INTO likeSaver (likes) VALUES (0);
