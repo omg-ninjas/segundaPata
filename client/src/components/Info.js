@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import $ from 'jquery';
 
-class Info extends React.Component{
+class Info extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -18,6 +18,11 @@ class Info extends React.Component{
     });
   }
 
+
+    //    <div>
+      // <iframe width="400" height="315" src="https://www.youtube.com/embed/78ii7obZtQ4" frameborder="9" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    // </div>
     //   fetch("http://localhost:3000/items", {
     //     method: "POST",
     //     body: JSON.stringify({
@@ -40,20 +45,17 @@ class Info extends React.Component{
 
   render() {
     return (
-      <div>
-    <center><img src="https://www.aperrados.com/wp-content/uploads/2017/01/bulldog-ingles-700x452.jpeg" alt="aquí van imagenes de perritos bien cute" /></center>
-      <center className = "Info">
+       <div>
 
-      <h3>¿Qué quieres vender?:
-        <input
-          value={this.state.video}
-          placeholder="nombre del artículo"
-          onChange={this.handleVideo}
-        /></h3>
+        <center>
+         <h1>
+Lenguaje de gato: lo que te está diciendo tu cola de gato</h1>
+         <h3>Sumérjase en la comprensión del lenguaje de cola de gato: qué significan los movimientos y las posiciones del apéndice más intrigante de su gato.</h3>
+         <div left><img width="400" height="315"src="https://cdn.omlet.co.uk/images/originals/Cat-Cat_Guide-A_little_girl_holding_a_cat.jpg" alt="aquí van imagenes de perritos bien cute" /></div>
 
         </center>
 
-      </div>
+       </div>
     );
   }
 }
