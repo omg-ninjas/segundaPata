@@ -57,6 +57,16 @@ var selectAccesories = function(callback) {
   });
 };
 
+var selectFood = function(callback) {
+  connection.query('SELECT * FROM items WHERE category = "food"', function(err, results, fields) {
+    if(err) {
+      callback(err, null);
+    } else {
+      callback(null, results);
+    }
+  });
+};
+
 
 const insertProduct = function(name, descrip, price, category, email, vendor, callback) {
   console.log("quiubo desde la db");
@@ -83,3 +93,4 @@ module.exports.insertProduct = insertProduct;
 module.exports.selectClothes = selectClothes;
 module.exports.selectBeds = selectBeds;
 module.exports.selectAccesories = selectAccesories;
+module.exports.selectFood = selectFood;

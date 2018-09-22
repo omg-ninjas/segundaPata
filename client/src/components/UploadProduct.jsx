@@ -149,11 +149,13 @@ class UploadProduct extends React.Component {
         <br />
       <h3>Elige una categoría:
            <select>
-              <option value="Clothes">Ropa</option>
-              <option value="Toys">Juguetes</option>
-              <option value="Beds">Camas</option>
-              <option value="Accessories">Accesorios</option>
-              <option value="Food">Comida</option>
+            
+              <option value={this.state.category} onChange={this.handleCategory}>Ropa</option>
+              <option value={this.state.category} onChange={this.handleCategory}>Juguetes</option>
+              <option value={this.state.category} onChange={this.handleCategory}>Camas</option>
+              <option value={this.state.category} onChange={this.handleCategory}>Accesorios</option>
+              <option value={this.state.category} onChange={this.handleCategory}>Comida</option>
+
            </select>
         </h3>
         <br />

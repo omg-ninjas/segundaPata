@@ -62,6 +62,22 @@ app.get('/accesories', function (req, res) {
    }
  });
 });
+
+
+app.get('/food', function (req, res) {
+ items.selectFood(function(err, data) {
+   if(err) {
+     console.log(err);
+     res.sendStatus(500);
+   } else {
+     console.log("get all food request performed")
+     res.json(data);
+   }
+ });
+});
+
+
+
 app.post('/items', function(req, res) {
  let name = req.body.name;
  let descrip = req.body.descrip;
