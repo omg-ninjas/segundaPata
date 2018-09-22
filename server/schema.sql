@@ -15,6 +15,15 @@ CREATE TABLE items (
   PRIMARY KEY (ID)
 );
 
+/* create a new table and place the int which referes to a number
+and pass in null without incrementing */
+
+CREATE TABLE likeSaver (
+  id int NOT NULL AUTO_INCREMENT,
+  likes integer NOT NULL,
+  PRIMARY KEY (ID)
+);
+
 /*  Execute this file from the command line by typing:
  *    mysql -u root -p < server/schema.sql
  *  to create the database and the tables.*/
