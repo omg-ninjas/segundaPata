@@ -148,11 +148,14 @@ class UploadProduct extends React.Component {
 
         <br />
       <h3>Elige una categoría:
-        <input
-          value={this.state.category}
-          placeholder="Recuerda que son: juguetes, accesorios, cyc (camitas y casitas) y accesorios"
-          onChange={this.handleCategory}
-        /></h3>
+           <select>
+              <option value="Clothes">Ropa</option>
+              <option value="Toys">Juguetes</option>
+              <option value="Beds">Camas</option>
+              <option value="Accessories">Accesorios</option>
+              <option value="Food">Comida</option>
+           </select>
+        </h3>
         <br />
         <h3>Pásanos tu mail:
         <input

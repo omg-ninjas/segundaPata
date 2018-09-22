@@ -34,6 +34,7 @@ class Upload extends React.Component {
             <option value="Toys">Toys</option>
             <option value="Beds">Beds</option>
             <option value="Accessories">Accessories</option>
+            <option value="Food">Food</option>
           </select>
       Descripcion:<input type="text" name="name" />
       Precio:<input type="text" name="name" />

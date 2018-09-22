@@ -29,6 +29,8 @@ class SearchBar extends React.Component {
 
       <button onClick={this.props.handleSubmitAccesories} data-type="justifyCenter"><span>Accesorios</span></button>
 
+      <button onClick={this.props.handleSubmitFood} data-type="justifyCenter"><span>Food</span></button>
+
             </div>
             );
         }
