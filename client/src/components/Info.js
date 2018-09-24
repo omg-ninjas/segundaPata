@@ -45,7 +45,7 @@ class Info extends Component{
 
   render() {
     return (
-       <div>
+       <body className ="infone">
         <center>
           <header>
              <h1>Lenguaje del gato</h1>
@@ -87,7 +87,7 @@ class Info extends Component{
 
         <p>Cuando tu gato envuelve a otro gato con la cola es como cuando tú le pones el brazo en la espalda a alguien. Significa amistad. </p>
           </center>
-       </div>
+       </body>
     );
   }
 }
