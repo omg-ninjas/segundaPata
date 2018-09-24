@@ -1,37 +1,48 @@
 import React from 'react';
 import $ from 'jquery';
-import axios from 'axios';
 
 class LikeButton extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        like: 0
+        likes: 0
       }
-      this.like = this.like.bind(this);
+      this.likes = this.likes.bind(this);
+      this.postLike = this.postLike.bind(this);
+      this.boxLike = this.boxLike.bind(this);
     }
 
-     like() {
+     likes() {
        this.setState({
-         like: this.state.like+1
+         likes: this.state.likes+1
        });
-      axios.post("likeButton", {
-        like: `${this.like}`
-      })
-       .then(res => console.log(response))
-       .catch(err => {
-         console.log(error)
-       });
-
      }
+
+     postLike(likes){
+    $.ajax({
+      method: 'POST',
+      url:'/likes',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        likes: this.state.likes
+      })
+    }).done(() => {
+      //this.getLikePost();
+    });
+  }
+
+   boxLike() {
+     this.postLike();
+     this.likes();
+   }
 
   render() {
     return (
       // Passing in text.
       <div className="num">
-        <button className="btn" onClick={this.like}>
+        <button className="btn" onClick={this.boxLike}>
         </button>
-          {this.state.like}
+          {this.state.likes}
       </div>
     );
   }

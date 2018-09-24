@@ -1,24 +1,24 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var items = require('../database/index.js');
-var app = express();
+var item = require('../database/index.js');
+var app = express()
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
 
 app.get('/items', function (req, res) {
- items.selectAll(function(err, data) {
+ item.selectAll(function(err, data) {
    if(err) {
      res.sendStatus(500);
    } else {
      console.log("get all items request performed")
      res.json(data);
-   }
+  }
  });
 });
 app.get('/toys', function (req, res) {
- items.selectToys(function(err, data) {
+ item.selectToys(function(err, data) {
    if(err) {
      console.log(err);
      res.sendStatus(500);
@@ -30,7 +30,7 @@ app.get('/toys', function (req, res) {
 });
 
 app.get('/clothes', function (req, res) {
- items.selectClothes(function(err, data) {
+ item.selectClothes(function(err, data) {
    if(err) {
      console.log(err);
      res.sendStatus(500);
@@ -41,7 +41,7 @@ app.get('/clothes', function (req, res) {
 });
 
 app.get('/beds', function (req, res) {
- items.selectBeds(function(err, data) {
+ item.selectBeds(function(err, data) {
    if(err) {
      console.log(err);
      res.sendStatus(500);
@@ -52,7 +52,7 @@ app.get('/beds', function (req, res) {
 });
 
 app.get('/accesories', function (req, res) {
- items.selectAccesories(function(err, data) {
+ item.selectAccesories(function(err, data) {
    if(err) {
      console.log(err);
      res.sendStatus(500);
@@ -89,7 +89,7 @@ app.post('/items', function(req, res) {
  if (!name) {
    res.sendStatus(400);
  } else {
-   items.insertProduct(name, descrip, price, category, email, vendor, (err, results) => {
+   item.insertProduct(name, descrip, price, category, email, vendor, (err, results) => {
      if (err) {
        res.sendStatus(500);
      } else {
