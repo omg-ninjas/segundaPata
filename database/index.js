@@ -58,7 +58,7 @@ var selectAccesories = function(callback) {
 };
 
 var selectFood = function(callback) {
-  connection.query('SELECT * FROM items WHERE category = "food"', function(err, results, fields) {
+  connection.query('SELECT * FROM items WHERE category = "Comida"', function(err, results, fields) {
     if(err) {
       callback(err, null);
     } else {
