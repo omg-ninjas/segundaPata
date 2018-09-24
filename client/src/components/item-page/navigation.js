@@ -8,8 +8,8 @@ const Navigation = () => {
     <nav className="headerStyle">
           <ul>
           <NavLink to="/">Casa</NavLink>
-          <NavLink to="/Upload">Subir</NavLink>
-          <NavLink to="/Info">Subir articulo</NavLink>
+          <NavLink to="/Upload">Subir </NavLink>
+          <NavLink to="/Info">Aprende mas de tu Mascota</NavLink>
 
           </ul>
     </nav>
