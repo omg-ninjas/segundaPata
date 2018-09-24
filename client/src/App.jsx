@@ -9,6 +9,7 @@ import Error from "./components/item-page/error.js";
 import Navigation from "./components/item-page/navigation.js";
 import Home from "./home.jsx";
 import Info from "./components/Info";
+import Converter from "./components/item-page/Converter.jsx"
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/item/:id" component={ItemPage} />
             <Route path="/Upload" component={UploadProduct} />
             <Route path="/Info" component={Info} />
+            <Route path="/Converter" component={Converter} />
             <Route  component={Error} />
           </Switch>
           <Footer />
