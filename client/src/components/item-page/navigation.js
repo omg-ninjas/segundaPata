@@ -8,7 +8,11 @@ const Navigation = () => {
     <nav className="headerStyle">
           <ul>
           <NavLink to="/">Casa</NavLink>
+<<<<<<< HEAD
           <NavLink to="/Upload">Subir </NavLink>
+=======
+          <NavLink to="/Upload">agregar</NavLink>
+>>>>>>> master
           <NavLink to="/Info">Aprende mas de tu Mascota</NavLink>
 
           </ul>
